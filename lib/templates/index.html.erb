@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Movies</title>
+</head>
+
+<body>
+  <ul>
+    <% Movie.all.each do |movie| %>
+      <li>
+        <a href="movies/<%= movie.url %>">
+          <%= movie.title %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</body>
+</html>
